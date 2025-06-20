@@ -1,0 +1,9 @@
+[submodule "deps/googletest"]
+	path = deps/googletest
+	url = https://github.com/google/googletest
+[submodule "deps/fast_matrix_market"]
+	path = deps/fast_matrix_market
+	url = https://github.com/alugowski/fast_matrix_market
+[submodule "deps/cuBool"]
+	path = deps/cuBool
+	url = https://github.com/mitya-y/cuBool
