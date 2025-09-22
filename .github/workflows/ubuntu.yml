@@ -9,7 +9,7 @@ on:
 
 env:
   build_dir: "build"
-  artifact: "cubool-ubuntu-build.tar.xz"
+  artifact: "cuboolgraph-ubuntu-build.tar.xz"
 
 jobs:
   build:
@@ -83,7 +83,7 @@ jobs:
       - name: Run tests
         working-directory: ${{ env.build_dir }}/tests
         run: |
-          bash cuboolgraph_tests | tee ${{ env.test-file }}
+          ./cuboolgraph_tests | tee ${{ env.test-file }}
 
       - name: Upload tests resutls
         uses: actions/upload-artifact@v4

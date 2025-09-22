@@ -20,7 +20,7 @@ jobs:
         include:
           - os: ubuntu-24.04
             cuda: "12.8"
-            gcc: 14
+            gcc: 13
     env:
       config: "Release"
 
@@ -71,7 +71,7 @@ jobs:
       - name: Run tests
         working-directory: ${{ env.build_dir }}/tests
         run: |
-          bash cuboolgraph_tests | tee ${{ env.test-file }}
+          ./cuboolgraph_tests | tee ${{ env.test-file }}
 
       - name: Upload tests resutls
         uses: actions/upload-artifact@v4
