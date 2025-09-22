@@ -2,9 +2,9 @@ name: Self-Hosted
 
 on:
   push:
-    branches: [ master, self-hosted-runner ]
+    branches: [ master ]
   pull_request:
-    branches: [ master, self-hosted-runner ]
+    branches: [ master ]
   workflow_dispatch:
 
 env:
@@ -20,7 +20,7 @@ jobs:
         include:
           - os: ubuntu-24.04
             cuda: "12.8"
-            gcc: 13
+            gcc: 14
     env:
       config: "Release"
 
