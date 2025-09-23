@@ -2,9 +2,9 @@ name: Self-Hosted
 
 on:
   push:
-    branches: [ master, self-hosted-runner ]
+    branches: [ master ]
   pull_request:
-    branches: [ master, self-hosted-runner ]
+    branches: [ master ]
   workflow_dispatch:
 
 env:
