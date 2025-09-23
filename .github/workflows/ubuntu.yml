@@ -47,11 +47,11 @@ jobs:
                 --verbose \
                 -j10
 
-      - name: Prepare upload binary
+      - name: Prepare upload project
         run: |
-          tar cfz ${{ env.artifact }} ${{ env.build_dir }}
+          tar cfz ${{ env.artifact }} ${{ env.build_dir }} 
 
-      - name: Upload binary
+      - name: Upload project
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.artifact }}
@@ -71,6 +71,10 @@ jobs:
       test-file: cpu_test.log
 
     steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
       - uses: actions/download-artifact@v4
         with:
           name: ${{ env.artifact }}
