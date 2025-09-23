@@ -94,7 +94,7 @@ jobs:
           name: ${{ env.test-file }}
           path: ${{ env.build_dir }}/tests/${{ env.test-file }}
 
-      - name: Check for unit tests results
+      - name: Check for tests results
         working-directory: ${{ env.build_dir }}/tests
         run: |
           ! grep -q "FAILED" ${{ env.test-file }}
