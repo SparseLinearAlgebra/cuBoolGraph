@@ -45,7 +45,7 @@ jobs:
                 -DCMAKE_CXX_COMPILER=g++-${{ matrix.gcc }} \
                 -DCMAKE_C_COMPILER=gcc-${{ matrix.gcc }}   \
                 -DCMAKE_BUILD_TYPE=${{ env.config }}       \
-                -DCUBOOL_BUILD_TESTS=ON                    \
+                -DCUBOOL_WITH_CUDA=ON                      \
                 -DCUBOOL_GRAPH_ENABLE_TESTING=ON
 
       - name: Build library sources
