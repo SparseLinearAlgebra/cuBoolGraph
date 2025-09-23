@@ -2,9 +2,9 @@ name: Ubuntu
 
 on:
   push:
-    branches: [ main, self-hosted-runner ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, self-hosted-runner ]
+    branches: [ main ]
   workflow_dispatch:
 
 env:
