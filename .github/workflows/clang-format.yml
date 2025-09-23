@@ -2,7 +2,7 @@ name: Clang Format
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths:
       - '.github/**'
       - 'src/**'
@@ -10,7 +10,7 @@ on:
       - 'tests/**'
       - '.clang-format'
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   formatting-check:
